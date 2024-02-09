@@ -1,25 +1,7 @@
-function getShippingMessage(country) {
-  const message;
-	const totalPrice = : price + deliveryFee;
-	switch (country) {
-		
-		case "Australia":
-            price = 120;
-            deliveryFee = 50;
-			message = `Shipping to ${country} will cost ${TotalPrice} credits`;
-            break;
-        case "Germany":
-            price = 80;
-            deliveryFee = 20;
-			message = `Shipping to ${country} will cost ${TotalPrice} credits`;
-			break;
-		case "Sweden":
-            price = 100;
-            deliveryFee = 20;
-			message = `Shipping to ${country} will cost ${TotalPrice} credits`;
-			break;
-	}
-	return message;
+function getShippingMessage(country, price, deliveryFee) {
+	let message;
+	const totalPrice =`Shipping to ${country} will cost ${price + deliveryFee} credits`;
+	return totalPrice;
 }
 
 console.log(getShippingMessage("Australia", 120, 50)); // "Shipping to Australia will cost 170 credits"
